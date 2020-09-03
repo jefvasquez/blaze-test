@@ -36,9 +36,9 @@ export default class createCustomer extends Component {
             phoneNumber: this.state.phoneNumber,
         }
         if(this.state.editing){
-            await axios.put('http://localhost:4300/api/customers/'+this.state.id, newCustomer);
+            await axios.put('/api/customers/'+this.state.id, newCustomer);
         } else {
-            await axios.post('http://localhost:4300/api/customers', newCustomer);
+            await axios.post('/api/customers', newCustomer);
             
             this.setState({
                 firstName: '',
