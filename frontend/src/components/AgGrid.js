@@ -20,7 +20,7 @@ export default class AgGrid extends Component {
     };
   }
     async componentDidMount() {
-        const res = await axios.get('http://localhost:4300/api/customers');
+        const res = await axios.get('/api/customers');
         this.setState({customers: res.data});
     }
       render() {
