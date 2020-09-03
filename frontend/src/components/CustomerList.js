@@ -44,7 +44,7 @@ export default class CustomerList extends Component {
         this.getCustomers();
     }
     async getCustomers() {
-        const res = await axios.get('http://localhost:4300/api/customers');
+        const res = await axios.get('/api/customers');
         this.setState({customers: res.data});
     }
     onChangeCustomer = (e) => {
@@ -52,7 +52,7 @@ export default class CustomerList extends Component {
     }
 
     deleteCustomer = async (id) => {
-        await axios.delete('http://localhost:4300/api/customers/' + id);
+        await axios.delete('/api/customers/' + id);
         this.getCustomers();
     }
     

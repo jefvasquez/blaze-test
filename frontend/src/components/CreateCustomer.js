@@ -15,7 +15,7 @@ export default class createCustomer extends Component {
         // const res = await axios.get('http://localhost:4300/api/customers/');
         // this.setState({customers: res.data});
         if(this.props.match.params.id){
-            const res = await axios.get('http://localhost:4300/api/customers/'+this.props.match.params.id);
+            const res = await axios.get('/api/customers/'+this.props.match.params.id);
             console.log(res.data);
             this.setState({
                 firstName: res.data.firstName,
